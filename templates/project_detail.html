@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+
+{% block content %}
+<main class="reveal">
+    <article class="blog-post">
+        
+        <!-- Header Section -->
+        <header class="post-header">
+            <div class="container">
+                <span class="category-tag">Project Documentation</span>
+                <h1 class="post-title">{{ project.title }}</h1>
+                
+                <div class="post-meta">
+                    <img src="{{ url_for('static', filename='pictures/profile.jpg') }}" alt="Naipan" class="author-img">
+                    <div class="meta-info">
+                        <span class="author-name">Naipan • </span>
+                        <!-- Otomatis ambil field 'date' dari JSON lo -->
+                        <span class="post-date">Published on {{ project.date }} • Technical Report</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Body -->
+        <div class="post-content container">
+            
+            <div class="mica-divider" style="margin: 2.5rem 0;"></div>
+            <!-- Langsung masuk ke Long Description (Full Story) -->
+            <section class="project-brief">
+                <p class="lead">
+                    {{ project.long_desc }}
+                </p>
+            </section>
+
+            <div class="mica-divider" style="margin: 2.5rem 0;"></div>
+
+            <!-- Technical Stack Section -->
+            <section class="tech-stack-section">
+                <h2><span class="highlight">#</span> Built With</h2>
+                <p>The following technologies and tools were leveraged to ensure the project's scalability and efficiency:</p>
+                
+                <div class="tech-grid">
+                    {% for tech in project.tech %}
+                        <div class="tech-item">
+                            <span class="tech-dot"></span>
+                            <span class="tech-name">{{ tech }}</span>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <div class="mica-divider" style="margin: 3rem 0;"></div>
+
+            <!-- Future Development / Closing -->
+            <section class="closing-statement">
+                <h2><span class="highlight">#</span> Final Thoughts</h2>
+                <p>
+                    This documentation serves as a comprehensive overview of the development process. 
+                    For further technical inquiries or collaboration regarding <strong>{{ project.title }}</strong>, 
+                    feel free to reach out via GitHub.
+                </p>
+            </section>
+        </div>
+
+        <!-- Action Footer -->
+        <footer class="post-footer container">
+            <div class="mica-divider"></div>
+            <a href="/" class="back-btn">
+                <span>← Back to Dashboard</span>
+            </a>
+        </footer>
+
+    </article>
+</main>
+{% endblock %}

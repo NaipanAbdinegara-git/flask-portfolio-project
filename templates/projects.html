@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+
+{% block content %}
+<main>
+    <!-- Header Page: Singkat & Padat kayak Greeting Card -->
+    <header class="mica-card reveal delay-1" style="margin-bottom: 2rem; padding: 2rem;">
+        <h1 class="highlight" style="font-size: 2rem; letter-spacing: -1px;">Technical Projects</h1>
+        <p class="about-text-small" style="margin-top: 0.5rem; opacity: 0.8;">
+            A curated list of my coding journey, from Python scripts to full-stack explorations.
+        </p>
+    </header>
+
+    <div class="mica-divider reveal delay-1"></div>
+
+    <!-- Project Grid Section -->
+    <section class="project-grid reveal delay-2" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+        
+        {% for id, data in projects.items() %}
+        <a href="{{ url_for('project_detail', project_name=id) }}" style="text-decoration: none; color: inherit; display: block;">
+            <article class="mica-card project-item" style="height: 100%; display: flex; flex-direction: column; padding: 1.8rem; transition: all 0.4s ease;">
+                
+                <div class="project-header">
+                    <span class="badge" style="font-size: 0.7rem; color: var(--primary); background: var(--primary-glow); padding: 4px 12px; border-radius: 50px; font-weight: 700;">
+                        {{ data.date }}
+                    </span>
+                    <h3 class="highlight" style="font-size: 1.4rem; margin-top: 1rem; margin-bottom: 0.8rem;">
+                        {{ data.title }}
+                    </h3>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                        {{ data.desc }}
+                    </p>
+                </div>
+
+                <div class="mica-divider" style="margin: 1.5rem 0; opacity: 0.2;"></div>
+
+                <!-- Footer Card: Tech Stack Preview -->
+                <div class="tech-stack" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto;">
+                    {% for tech in data.tech[:3] %}
+                        <span class="tech-badge" style="font-size: 0.75rem; border: 1px solid var(--border-light); padding: 3px 10px; border-radius: 6px; background: rgba(255,255,255,0.2);">
+                            {{ tech }}
+                        </span>
+                    {% endfor %}
+                    {% if data.tech|length > 3 %}
+                        <span style="font-size: 0.75rem; color: var(--text-secondary); align-self: center;">+{{ data.tech|length - 3 }} more</span>
+                    {% endif %}
+                </div>
+            </article>
+        </a>
+        {% endfor %}
+
+    </section>
+
+    <div class="mica-divider reveal delay-3" style="margin-top: 3rem;"></div>
+
+    <!-- Back to Home Button -->
+    <footer class="reveal delay-3" style="text-align: center; margin-bottom: 4rem;">
+        <a href="/" class="github-link" style="justify-content: center; font-size: 1rem;">
+            ← Return to Overview
+        </a>
+    </footer>
+</main>
+{% endblock %} 

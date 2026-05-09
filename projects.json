@@ -1,0 +1,15 @@
+{
+  "web-chat": {
+    "date": "May 04, 2025",
+    "title": "ai-web-chat",
+    "desc": "Bikin chat app pake Python",
+    "long_desc": "A simple web chat application built with Flask and Socket.io. allows users to communicate in real-time. The project demonstrates the use of Flask for backend development and Socket.io for real-time communication. Users can join chat rooms and exchange messages seamlessly. The application is designed to be lightweight and easy to deploy, making it an ideal choice for those looking to create a basic chat application with Python.",
+    "tech": ["Flask", "Socket.io"]
+  },
+  "data-analyzer": {
+    "date": "May 04, 2025",
+    "title": "datawhisper",
+    "desc": "Ngelola data CSV jadi grafik",
+    "tech": ["Pandas", "Matplotlib"]
+  }
+}
