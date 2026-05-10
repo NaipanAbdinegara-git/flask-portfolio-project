@@ -17,14 +17,22 @@ def projects():
     return render_template('projects.html', projects=all_projects)
 
 # Ganti nama fungsi jadi project_detail biar gak BuildError
-@app.route("/project/<project_name>")
+@app.route("/projects/<project_name>")
 def project_detail(project_name):
     projects = load_project()
     if project_name in projects:
         # Kirim data project spesifik ke template
         return render_template("project_detail.html", project=projects[project_name])
     else:
-        return "Project not found", 404
+        return render_template("404.html")
+    
+@app.route("/about")
+def about():
+    return render_template("about.html")
+    
+@app.route("/<path:notfound>")
+def notfound(notfound):
+    return render_template("404.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

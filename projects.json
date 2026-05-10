@@ -1,15 +1,37 @@
 {
-  "web-chat": {
-    "date": "May 04, 2025",
-    "title": "ai-web-chat",
-    "desc": "Bikin chat app pake Python",
-    "long_desc": "A simple web chat application built with Flask and Socket.io. allows users to communicate in real-time. The project demonstrates the use of Flask for backend development and Socket.io for real-time communication. Users can join chat rooms and exchange messages seamlessly. The application is designed to be lightweight and easy to deploy, making it an ideal choice for those looking to create a basic chat application with Python.",
-    "tech": ["Flask", "Socket.io"]
+  "nvidia-chat": {
+    "date": "February 26, 2026",
+    "title": "NVIDIA-NIM Web Chat",
+    "desc": "A simple web chat application built with NextJS, React, and TypeScript",
+    "long_desc": "This project is a simple web chat application built with NextJS, React, and TypeScript. It allows users to create chat  and communicate with AI. The application is designed to be lightweight and easy to use, making it a great choice for small AI project, or just for development/testing.",
+    "tech": ["NextJS", "React", "TypeScript"]
   },
-  "data-analyzer": {
-    "date": "May 04, 2025",
-    "title": "datawhisper",
-    "desc": "Ngelola data CSV jadi grafik",
-    "tech": ["Pandas", "Matplotlib"]
+  "weather-requests": {
+    "date": "April 30, 2026",
+    "title": "Weather Info Requests",
+    "desc": "A simple web application that allows users to request weather information for a specific location.",
+    "long_desc": "This project is a simple web application that allows users to request weather information for a specific location. The application uses the OpenWeatherMap API to retrieve weather data and display it to the user. The application is designed to be lightweight and easy to use, making it a great choice for small AI project, or just for development/testing.",
+    "tech": ["Flask", "OpenMeteo API", "Nominatim API"]
+  },
+  "flask-dashboard": {
+    "date": "May 04, 2026",
+    "title": "Simple Flask Dashboard",
+    "desc": "A simple dashboard built with Flask to see an alive and dead project that i have worked on.",
+    "long_desc": "This project is a simple dashboard built with Flask to see an alive and dead project that i have worked on. The dashboard displays a list of projects, along with their status (alive or dead) and a brief description.",
+    "tech": ["Flask", "Bootstrap"]
+  },
+  "python-random-text": {
+    "date": "May 05, 2026",
+    "title": "Python Random Text Generator",
+    "desc": "Generate random text like Lorem Ipsum, available in English, Russian, Japan and Indonesian.",
+    "long_desc": "This project is a simple Python script that generates random text like Lorem Ipsum. The script allows users to specify the language of the generated text, with options for English, Russian, Japanese, and Indonesian. The generated text can be used for various purposes, such as filling in placeholder content or testing text processing algorithms.",
+    "tech": ["Python"]
+  },
+  "datawhisper": {
+    "date": "May, 08, 2026",
+    "title": "DataWhisper",
+    "desc": "DataWhisper is a lightweight Python tool that turns raw CSV/Excel data into readable, story-style insights. It loads tabular data, validates and cleans it, then prints a polished console summary using rich.",
+    "long_desc": "DataWhisper is a lightweight Python tool that turns raw CSV/Excel data into readable, story-style insights. It loads tabular data, validates and cleans it, then prints a polished console summary using rich. The tool is designed to be simple and efficient, making it ideal for quick data analysis and reporting.",
+    "tech": ["Python", "Pandas", "Rich"]
   }
 }
