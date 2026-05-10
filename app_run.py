@@ -1,10 +1,13 @@
 from flask import Flask, render_template
-import json
+import json, os
 
 app = Flask(__name__)
 
 def load_project():
-    with open("projects.json", "r") as file:
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(base_path, "projects.json")
+    
+    with open(file_path, "r") as file:
         return json.load(file)
 
 @app.route("/")
@@ -16,12 +19,10 @@ def projects():
     all_projects = load_project()
     return render_template('projects.html', projects=all_projects)
 
-# Ganti nama fungsi jadi project_detail biar gak BuildError
 @app.route("/projects/<project_name>")
 def project_detail(project_name):
     projects = load_project()
     if project_name in projects:
-        # Kirim data project spesifik ke template
         return render_template("project_detail.html", project=projects[project_name])
     else:
         return render_template("404.html")
