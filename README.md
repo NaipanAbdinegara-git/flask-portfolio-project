@@ -2,17 +2,6 @@
 
 ![GitHub stars](https://img.shields.io/github/stars/NaipanAbdinegara-git/flask-portfolio-project?style=for-the-badge&logo=github) ![GitHub forks](https://img.shields.io/github/forks/NaipanAbdinegara-git/flask-portfolio-project?style=for-the-badge&logo=github) ![GitHub issues](https://img.shields.io/github/issues/NaipanAbdinegara-git/flask-portfolio-project?style=for-the-badge&logo=github) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
-## 📑 Table of Contents
-
-- [Description](#description)
-- [Tech Stack](#tech-stack)
-- [Quick Start](#quick-start)
-- [Key Dependencies](#key-dependencies)
-- [Screenshots](#screenshots)
-- [Project Structure](#project-structure)
-- [Development Setup](#development-setup)
-- [Contributing](#contributing)
-
 ## 📝 Description
 
 flask-portfolio-project is a sophisticated and modern personal portfolio platform engineered with Python and Flask. It leverages the Jinja2 templating engine to deliver a seamless, dynamic user experience. The standout feature is its stunning 'Mica' design language—inspired by modern Windows aesthetics—which provides a sleek, translucent, and professional look. Beyond aesthetics, the project is architected for efficiency, utilizing JSON-based project routing for easy content management and optimized client-side performance for lightning-fast load times. This portfolio serves as a high-performance showcase for developers looking for a blend of contemporary design and robust backend architecture.
