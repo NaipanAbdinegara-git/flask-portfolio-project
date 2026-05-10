@@ -1,4 +1,4 @@
-from flask_backend import app
+from app_run import app
 
 if __name__ == "__main__":
     app.run()
