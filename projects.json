@@ -33,5 +33,12 @@
     "desc": "DataWhisper is a lightweight Python tool that turns raw CSV/Excel data into readable, story-style insights. It loads tabular data, validates and cleans it, then prints a polished console summary using rich.",
     "long_desc": "DataWhisper is a lightweight Python tool that turns raw CSV/Excel data into readable, story-style insights. It loads tabular data, validates and cleans it, then prints a polished console summary using rich. The tool is designed to be simple and efficient, making it ideal for quick data analysis and reporting.",
     "tech": ["Python", "Pandas", "Rich"]
+  },
+  "daily-score": {
+    "date": "May 12, 2026",
+    "title" "Daily Score (Dummy Project)",
+    "desc": "Simple .csv writer for daily score",
+    "long_desc": "This program is a dummy project, used to write your daily score into .csv files, so you can remember it, and you can compare it anytime you want by seeing the .csv files",
+    "tech": ["Python". "csv"]
   }
 }
