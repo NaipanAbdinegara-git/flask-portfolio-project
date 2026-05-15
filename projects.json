@@ -40,5 +40,12 @@
     "desc": "Simple .csv writer for daily score",
     "long_desc": "This program is a dummy project, used to write your daily score into .csv files, so you can remember it, and you can compare it anytime you want by seeing the .csv files",
     "tech": ["Python", "csv"]
+  },
+  "oh-my-microslop": {
+    "date": "May 05, 2026",
+    "title": "Oh My Microslop!",
+    "desc": "A parody of many of agreements on many apps right now",
+    "long_desc": "This program is a parody of `End User License Agreements`/agreements or sum like that, many privacy-violations run on a hide, and `kill` human`s privacy slowly",
+    "tech": ["Python", "csv"]
   }
 }
