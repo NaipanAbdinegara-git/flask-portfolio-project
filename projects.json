@@ -47,5 +47,12 @@
     "desc": "A parody of many of agreements on many apps right now",
     "long_desc": "This program is a parody of `End User License Agreements`/agreements or sum like that, many privacy-violations run on a hide, and `kill` human`s privacy slowly",
     "tech": ["Python", "csv"]
+  },
+  "mental-health-calculator": {
+    "date": "May 15, 2026",
+    "title": "Mental Health Calculator",
+    "desc": "Simple Python Program for calculating your mental health",
+    "long_desc": "This Program using DASS-21 for the questions, asking a 21 randomized question when its running to the user. Calculating it, and gave summary, motivation, and save the results on results/results.txt",
+    "tech": ["Python", "rich", "csv", "randon"]
   }
 }
