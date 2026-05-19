@@ -1,4 +1,3 @@
-/* --- Hero Typing Section --- */
 .my-name {
   margin-bottom: 1.5rem;
 }
@@ -26,7 +25,6 @@
   50% { border-color: var(--primary); }
 }
 
-/* --- GitHub Profile Card --- */
 .github-card {
   display: flex;
   align-items: center;
@@ -41,7 +39,7 @@
   border: 4px solid var(--border-light);
   object-fit: cover;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0; /* Anti gepeng */
+  flex-shrink: 0;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -49,17 +47,15 @@
   transform: scale(1.05) rotate(3deg);
 }
 
-/* Vertical Divider */
 .vertical-divider {
   width: 1px;
-  align-self: stretch; /* Mengikuti tinggi konten github-info */
+  align-self: stretch;
   min-height: 80px;
   background: linear-gradient(to bottom, transparent, var(--primary), transparent);
   opacity: 0.4;
   flex-shrink: 0;
 }
 
-/* GitHub Content Info */
 .github-info {
   flex: 1;
 }
@@ -77,7 +73,7 @@
 }
 
 .github-link {
-  display: inline-flex; /* Ganti ke inline-flex biar aligment icon/teks lebih enak */
+  display: inline-flex;
   align-items: center;
   margin-top: 1rem;
   color: var(--primary);
@@ -92,24 +88,21 @@
   transform: translateX(5px);
 }
 
-/* --- Blog Article Theme (Standard Layout) --- */
 .blog-post {
     width: 100%;
-    /* Biar gak nempel nav banget */
     padding-top: 2rem; 
-    display: block; /* Matiin flex-center kalau ada */
+    display: block;
 }
 
 .container {
-    /* Artikel konvensional gak ditaro di tengah banget, tapi ada space di kiri */
     max-width: 1000px; 
-    margin-left: 2rem; /* Geser ke kiri, gak "tengah-ish" lagi */
+    margin-left: 2rem;
     padding-right: 2rem;
 }
 
 .post-header {
     margin-bottom: 3rem;
-    text-align: left; /* FIX: Harus rata kiri */
+    text-align: left;
 }
 
 .category-tag {
@@ -126,10 +119,9 @@
     line-height: 1.1;
     margin: 1rem 0 2rem 0;
     color: var(--text-main);
-    max-width: 900px; /* Biar gak kepanjangan ke kanan banget */
+    max-width: 900px; 
 }
 
-/* Author info rata kiri */
 .post-meta {
     display: flex;
     align-items: center;
@@ -142,12 +134,11 @@
     border-radius: 50%;
 }
 
-/* Konten Utama */
 .post-content {
     font-size: 1.25rem;
     line-height: 1.8;
     color: var(--text-main);
-    max-width: 850px; /* Lebar baca yang nyaman */
+    max-width: 850px;
 }
 
 .lead {
@@ -160,11 +151,10 @@
 .post-content h2 {
     font-size: 2rem;
     margin: 3rem 0 1rem 0;
-    border-bottom: 2px solid var(--border-light); /* Garis bawah khas artikel */
+    border-bottom: 2px solid var(--border-light);
     padding-bottom: 0.5rem;
 }
 
-/* Tech Stack jadi list simpel aja biar gak kek kotak-kotak game */
 .tech-grid {
     display: flex;
     flex-wrap: wrap;
@@ -196,11 +186,10 @@
 }
 
 .project-item:hover {
-    border-color: var(--primary); /* Kasih warna border tipis pas hover */
-    background: rgba(255, 255, 255, 0.85); /* Makin solid dikit pas fokus */
+    border-color: var(--primary); 
+    background: rgba(255, 255, 255, 0.85);
 }
 
-/* Mobile: Baru di sini kita paksa tengah biar rapi di layar kecil */
 @media (max-width: 1024px) {
     .container {
         margin: 0 auto;
