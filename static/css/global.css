@@ -11,7 +11,6 @@
   --font-main: 'Segoe UI', 'Poppins', sans-serif;
 }
 
-/* --- Base Setup --- */
 * { 
   box-sizing: border-box; 
   margin: 0; 
@@ -28,10 +27,9 @@ body {
   flex-direction: column;
 }
 
-/* --- Floating Navbar --- */
 nav {
   position: sticky;
-  top: 15px; /* Jarak pas ke atas */
+  top: 15px; 
   width: fit-content; 
   margin: 0 auto; 
   padding: 0.7rem 2rem;
@@ -74,16 +72,14 @@ nav:hover {
   background: rgba(0, 120, 212, 0.1); 
 }
 
-/* --- Main Content Area --- */
 main { 
   flex: 1 0 auto; 
-  padding: 1rem 1rem 3rem 1rem; /* Padding top dikecilkan biar gak jauh dari nav */
+  padding: 1rem 1rem 3rem 1rem;
   width: 100%; 
   max-width: 900px; 
   margin: 0 auto; 
 }
 
-/* Menarik card pertama agar lebih dekat ke navbar */
 main section:first-of-type {
   margin-top: 10px;
 }
@@ -96,7 +92,6 @@ footer {
   font-size: 0.85rem; 
 }
 
-/* --- Mica Card & Effects --- */
 .mica-card {
   background: var(--mica-bg);
   backdrop-filter: var(--mica-blur);
@@ -116,7 +111,6 @@ footer {
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
 }
 
-/* Shine effect pas di-hover */
 .mica-card::before {
   content: "";
   position: absolute;
@@ -144,7 +138,6 @@ footer {
   font-weight: 600; 
 }
 
-/* --- Container Tambahan (Opsional) --- */
 .mica-container {
   background: var(--mica-bg);
   backdrop-filter: var(--mica-blur);
@@ -156,7 +149,6 @@ footer {
   margin-bottom: 2rem;
 }
 
-/* --- Mobile Fix --- */
 @media (max-width: 600px) {
   nav { 
     top: 10px; 
@@ -180,7 +172,6 @@ footer {
   }
 }
 
-/* --- Animation Library --- */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -193,16 +184,14 @@ footer {
 }
 
 .reveal {
-  opacity: 0; /* Default invisible sebelum animasi jalan */
+  opacity: 0; 
   animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
-/* Delay biar munculnya satu-satu (Staggered) */
 .delay-1 { animation-delay: 0.2s; }
 .delay-2 { animation-delay: 0.4s; }
 .delay-3 { animation-delay: 0.6s; }
 
-/* Animasi khusus Navbar: Muncul dari kiri & memanjang */
 @keyframes slideRight {
   from {
     opacity: 0;
