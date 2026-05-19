@@ -1,6 +1,5 @@
 from flask import Flask, render_template
-import json
-import os
+import json, os
 
 app = Flask(__name__, 
             template_folder=os.path.join(os.path.dirname(__file__), 'templates'),
@@ -14,10 +13,10 @@ def load_project():
         with open(file_path, "r") as file:
             return json.load(file)
     except FileNotFoundError:
-        print(f"Error: projects.json tidak ditemukan di {base_path}")
+        print(f"Error: projects.json not found in {base_path}")
         return {}
     except json.JSONDecodeError:
-        print("Error: projects.json format tidak valid")
+        print("Error: projects.json has invalid format")
         return {}
 
 @app.route("/")
