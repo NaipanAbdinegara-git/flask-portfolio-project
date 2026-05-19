@@ -1,4 +1,3 @@
-/* Sembunyikan item yang belum waktunya muncul */
   .project-item-container.hidden {
     display: none;
   }
