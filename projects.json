@@ -1,0 +1,58 @@
+{
+  "nvidia-chat": {
+    "date": "February 26, 2026",
+    "title": "NVIDIA-AI  Web Chat",
+    "desc": "A simple web chat application built with NextJS, React, and TypeScript",
+    "long_desc": "This project is a simple web chat application built with NextJS, React, and TypeScript. It allows users to create chat  and communicate with AI. The application is designed to be lightweight and easy to use, making it a great choice for small AI project, or just for development/testing.",
+    "tech": ["NextJS", "React", "TypeScript"]
+  },
+  "weather-requests": {
+    "date": "April 30, 2026",
+    "title": "Weather Info Requests",
+    "desc": "A simple web application that allows users to request weather information for a specific location.",
+    "long_desc": "This project is a simple web application that allows users to request weather information for a specific location. The application uses the OpenWeatherMap API to retrieve weather data and display it to the user. The application is designed to be lightweight and easy to use, making it a great choice for small AI project, or just for development/testing.",
+    "tech": ["Flask", "OpenMeteo API", "Nominatim API"]
+  },
+  "flask-dashboard": {
+    "date": "May 04, 2026",
+    "title": "Simple Flask Dashboard",
+    "desc": "A simple dashboard built with Flask to see an alive and dead project that i have worked on.",
+    "long_desc": "This project is a simple dashboard built with Flask to see an alive and dead project that i have worked on. The dashboard displays a list of projects, along with their status (alive or dead) and a brief description.",
+    "tech": ["Flask", "Bootstrap"]
+  },
+  "python-random-text": {
+    "date": "May 05, 2026",
+    "title": "Python Random Text Generator",
+    "desc": "Generate random text like Lorem Ipsum, available in English, Russian, Japan and Indonesian.",
+    "long_desc": "This project is a simple Python script that generates random text like Lorem Ipsum. The script allows users to specify the language of the generated text, with options for English, Russian, Japanese, and Indonesian. The generated text can be used for various purposes, such as filling in placeholder content or testing text processing algorithms.",
+    "tech": ["Python"]
+  },
+  "datawhisper": {
+    "date": "May 08, 2026",
+    "title": "DataWhisper",
+    "desc": "DataWhisper is a lightweight Python tool that turns raw CSV/Excel data into readable, story-style insights. It loads tabular data, validates and cleans it, then prints a polished console summary using rich.",
+    "long_desc": "DataWhisper is a lightweight Python tool that turns raw CSV/Excel data into readable, story-style insights. It loads tabular data, validates and cleans it, then prints a polished console summary using rich. The tool is designed to be simple and efficient, making it ideal for quick data analysis and reporting.",
+    "tech": ["Python", "Pandas", "Rich"]
+  },
+  "daily-score": {
+    "date": "May 12, 2026",
+    "title": "Daily Score (Dummy Project)",
+    "desc": "Simple .csv writer for daily score",
+    "long_desc": "This program is a dummy project, used to write your daily score into .csv files, so you can remember it, and you can compare it anytime you want by seeing the .csv files",
+    "tech": ["Python", "csv"]
+  },
+  "oh-my-microslop": {
+    "date": "May 05, 2026",
+    "title": "Oh My Microslop!",
+    "desc": "A parody of many of agreements on many apps right now",
+    "long_desc": "This program is a parody of `End User License Agreements`/agreements or sum like that, many privacy-violations run on a hide, and `kill` human`s privacy slowly",
+    "tech": ["Python", "csv"]
+  },
+  "mental-health-calculator": {
+    "date": "May 15, 2026",
+    "title": "Mental Health Calculator",
+    "desc": "Simple Python Program for calculating your mental health",
+    "long_desc": "This Program using DASS-21 for the questions, asking a 21 randomized question when its running to the user. Calculating it, and gave summary, motivation, and save the results on results/results.txt",
+    "tech": ["Python", "rich", "csv", "randon"]
+  }
+}

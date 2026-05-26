@@ -1,0 +1,25 @@
+  .project-wrapper.hidden {
+    display: none !important;
+  }
+  
+  #load-more-container {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .btn-see-more {
+    background: var(--primary-glow);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  .btn-see-more:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+  }

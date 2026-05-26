@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naipan's Portfolio</title>
+    <link rel="stylesheet" href="/static/css/global.css">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <nav class="reveal-nav">
+        <ul class="menuItems">
+            <li><a href='/' data-item='Home' class="nav-link">Home</a></li>
+            <li><a href='/projects' data-item='Project' class="nav-link">Projects</a></li>
+            <li><a href='/about' data-item='About' class="nav-link">About Me</a></li>
+            <li><a href='https://github.com/NaipanAbdinegara-git' data-item='Github'>Github</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+        <footer>
+            
+            <p>&copy; 2026 Built with ❤️ by Naipan Abdinegara</p>
+        </footer>
+        
+        <script>
+            // Automatically highlight active navigation link based on current path
+            document.addEventListener('DOMContentLoaded', () => {
+                const path = window.location.pathname;
+                const navLinks = document.querySelectorAll('.menuItems a.nav-link');
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href === path) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            });
+        </script>
+        {% block scripts %}
+        {% endblock %}
+</body>
+</html>
