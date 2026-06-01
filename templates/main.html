@@ -7,23 +7,19 @@
 {% endblock %}
 
 {% block content %}
-    <!-- Section 1: Home (Loaded by default) -->
     <section id="home" class="scroll-section loaded">
-        <!-- Card 1: Greeting (Compact & Punchy) -->
         <div class="mica-card reveal delay-1">
             <p>Hi, I'm <span id="typing-text"></span><span class="typing-cursor"></span></p>
         </div>
 
         <div class="mica-divider reveal delay-1"></div>
 
-        <!-- Floating Text Section (Story) -->
         <div class="about-text main-story reveal delay-2">
             <p>A student from <span class="highlight">Palembang</span> who's been translating logic into code. What started as a curiosity has evolved into 5 years of <span class="highlight">deep-diving</span> into various programming languages. Currently, I'm focusing on mastering the art of building efficient systems while constantly expanding my technical stack. Let's build something cool!</p>
         </div>
 
         <div class="mica-divider reveal delay-2"></div>
 
-        <!-- Card 2: GitHub (Detailed & Interactive) -->
         <section class="mica-card github-card reveal delay-3">
             <img src="/static/pictures/profile.jpg" alt="Profile" class="profile-pic">
             
@@ -41,11 +37,9 @@
         </section>
     </section>
 
-    <!-- Divider and Section 2: Projects (Lazy loaded via AJAX) -->
     <div class="mica-divider scroll-divider" id="projects-divider" style="opacity: 0; transition: opacity 0.5s;"></div>
     <section id="projects" class="scroll-section lazy-section" data-url="/projects"></section>
 
-    <!-- Divider and Section 3: About (Lazy loaded via AJAX) -->
     <div class="mica-divider scroll-divider" id="about-divider" style="opacity: 0; transition: opacity 0.5s;"></div>
     <section id="about" class="scroll-section lazy-section" data-url="/about"></section>
 {% endblock %}
