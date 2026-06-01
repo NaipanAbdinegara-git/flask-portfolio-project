@@ -212,7 +212,6 @@ footer {
   animation: slideRight 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* SPA Navigation Highlight Active Style */
 .menuItems a.active {
   color: var(--primary) !important; 
   background: rgba(0, 120, 212, 0.15) !important; 
@@ -220,14 +219,12 @@ footer {
   box-shadow: inset 0 0 4px rgba(0, 120, 212, 0.1);
 }
 
-/* SPA Scroll Section Anchors & Spacing */
 .scroll-section {
   scroll-margin-top: 100px;
   padding: 1rem 0;
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Lazy Loaded Sections Dynamic Transitions */
 .lazy-section {
   opacity: 0;
   transform: translateY(20px);
@@ -249,7 +246,6 @@ footer {
   display: none !important;
 }
 
-/* Slick Mica Glass Spin Loader */
 .lazy-section.loading::before {
   content: "";
   position: absolute;
