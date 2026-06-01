@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // ==========================================
-    // 1. Typing Effect (Original Code Preserved)
-    // ==========================================
     const typingElement = document.getElementById('typing-text');
     const words = ["Naipan Abdinegara", "Naipan", "NaipanAbdinegara-git"];
     let wordIndex = 0;
@@ -43,9 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         typeWriterEffect();
     }
 
-    // ==========================================
-    // 2. On-Demand AJAX Lazy Loading Engine
-    // ==========================================
     const lazySections = document.querySelectorAll('.lazy-section');
 
     // Function to load a section dynamically
@@ -67,18 +61,15 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const html = await response.text();
             
-            // Inject HTML content
             section.innerHTML = html;
             section.classList.remove('loading');
             section.classList.add('loaded');
 
-            // Fade in the section divider
             const divider = document.getElementById(`${section.id}-divider`);
             if (divider) {
                 divider.style.opacity = '0.3';
             }
 
-            // Post-load behavior for specific sections
             if (section.id === 'projects') {
                 bindSeeMoreProjects();
             }
@@ -91,18 +82,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // IntersectionObserver to trigger loads when scrolling down
     const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const section = entry.target;
                 loadLazySection(section);
-                observer.unobserve(section); // Stop watching once loaded
+                observer.unobserve(section); 
             }
         });
     }, {
         root: null,
-        rootMargin: '0px 0px 250px 0px', // Fetch 250px before entering viewport
+        rootMargin: '0px 0px 250px 0px',
         threshold: 0
     });
 
@@ -110,9 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lazyLoadObserver.observe(section);
     });
 
-    // ==========================================
-    // 3. See More Projects Button Binding
-    // ==========================================
+
     function bindSeeMoreProjects() {
         const btn = document.getElementById('see-more-btn');
         const container = document.getElementById('project-container');
@@ -136,12 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // ==========================================
-    // 4. Smooth Navigation & SPA Anchors Interceptor
-    // ==========================================
     const navLinks = document.querySelectorAll('.nav-link');
 
-    // Smooth scroll helper
     function scrollToSection(selector) {
         const element = document.querySelector(selector);
         if (element) {
@@ -154,11 +138,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const href = link.getAttribute('href');
             if (href.includes('/#')) {
                 e.preventDefault();
-                const hash = href.substring(href.indexOf('#')); // e.g. "#projects"
+                const hash = href.substring(href.indexOf('#'));
                 const targetSection = document.querySelector(hash);
 
                 if (targetSection) {
-                    // Update Active Style immediately in UI
                     navLinks.forEach(l => l.classList.remove('active'));
                     link.classList.add('active');
 
@@ -184,9 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ==========================================
-    // 5. Active Section Navigation Highlighting
-    // ==========================================
     const allSections = document.querySelectorAll('.scroll-section');
     
     const navHighlightObserver = new IntersectionObserver((entries) => {
@@ -213,17 +193,12 @@ document.addEventListener('DOMContentLoaded', () => {
         navHighlightObserver.observe(section);
     });
 
-    // ==========================================
-    // 6. Deep-Link Hash Routing on Page Load
-    // ==========================================
     async function handleInitialHashRoute() {
         const hash = window.location.hash; // e.g. "#about"
         if (hash) {
             const targetSection = document.querySelector(hash);
             if (targetSection) {
-                // If it is a lazy-load section, fetch it and all preceding sections to prevent layout gaps
                 if (targetSection.classList.contains('lazy-section')) {
-                    // Load all lazy sections up to and including the targeted one
                     let loadPromises = [];
                     let metTarget = false;
                     
@@ -238,18 +213,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     await Promise.all(loadPromises);
                 }
 
-                // Scroll to target smoothly after layout is computed
                 setTimeout(() => {
                     scrollToSection(hash);
                 }, 300);
             }
         } else {
-            // Highlight Home by default if no hash
             const homeLink = document.querySelector('a[href="/"]');
             if (homeLink) homeLink.classList.add('active');
         }
     }
 
-    // Execute hash routing on load
     handleInitialHashRoute();
 });
